@@ -28,20 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Button button2;
+            Button button1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             panel4 = new Panel();
             panel3 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             panelBarraTitulo = new Panel();
+            titulo = new Label();
+            pictureBox1 = new PictureBox();
             btnMiminizar = new PictureBox();
             btnMaximizar = new PictureBox();
+            button2 = new Button();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panelBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMiminizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
             SuspendLayout();
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Verdana", 9.75F, FontStyle.Bold);
+            button2.Location = new Point(0, 279);
+            button2.Margin = new Padding(0);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 40);
+            button2.TabIndex = 1;
+            button2.Text = "Registrarse";
+            button2.UseMnemonic = false;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.AutoEllipsis = true;
+            button1.BackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Verdana", 9.75F, FontStyle.Bold);
+            button1.Location = new Point(0, 227);
+            button1.Margin = new Padding(0);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 40);
+            button1.TabIndex = 0;
+            button1.TabStop = false;
+            button1.Text = "Iniciar Sesion";
+            button1.UseMnemonic = false;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -50,57 +88,41 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panelBarraTitulo);
             panel1.Dock = DockStyle.Fill;
+            panel1.Font = new Font("Verdana", 9.75F);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1373, 738);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            panel1.MouseHover += pictureBox1_MouseHover;
             // 
             // panel4
             // 
-            panel4.BackColor = Color.White;
+            panel4.BackColor = Color.FromArgb(172, 237, 255);
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(1173, 40);
             panel4.Name = "panel4";
             panel4.Size = new Size(200, 698);
             panel4.TabIndex = 2;
-            panel4.Paint += panel4_Paint;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(0, 0, 20);
+            panel3.BackColor = Color.FromArgb(202, 229, 255);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 40);
+            panel3.Margin = new Padding(0, 0, 0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 698);
-            panel3.TabIndex = 1;
+            panel3.TabIndex = 0;
             panel3.Paint += panel3_Paint;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(0, 70);
-            button2.Name = "button2";
-            button2.Size = new Size(197, 46);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(197, 46);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // panelBarraTitulo
             // 
-            panelBarraTitulo.BackColor = Color.Blue;
+            panelBarraTitulo.BackColor = Color.Black;
+            panelBarraTitulo.Controls.Add(titulo);
+            panelBarraTitulo.Controls.Add(pictureBox1);
             panelBarraTitulo.Controls.Add(btnMiminizar);
             panelBarraTitulo.Controls.Add(btnMaximizar);
             panelBarraTitulo.Dock = DockStyle.Top;
@@ -111,27 +133,58 @@
             panelBarraTitulo.Paint += panelBarraTitulo_Paint;
             panelBarraTitulo.MouseMove += panelBarraTitulo_MouseMove;
             // 
+            // titulo
+            // 
+            titulo.AutoSize = true;
+            titulo.Font = new Font("Verdana", 9.75F, FontStyle.Bold);
+            titulo.ForeColor = Color.White;
+            titulo.Location = new Point(12, 12);
+            titulo.Name = "titulo";
+            titulo.Size = new Size(58, 16);
+            titulo.TabIndex = 3;
+            titulo.Text = "TITULO";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Image = Properties.Resources.maximize3;
+            pictureBox1.Location = new Point(1314, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(16, 16);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
+            pictureBox1.MouseHover += pictureBox1_MouseHover;
+            // 
             // btnMiminizar
             // 
-            btnMiminizar.Image = Properties.Resources.criko;
-            btnMiminizar.Location = new Point(1172, 3);
+            btnMiminizar.BackColor = Color.Transparent;
+            btnMiminizar.BackgroundImageLayout = ImageLayout.Center;
+            btnMiminizar.Image = (Image)resources.GetObject("btnMiminizar.Image");
+            btnMiminizar.Location = new Point(1282, 12);
             btnMiminizar.Name = "btnMiminizar";
-            btnMiminizar.Size = new Size(91, 37);
-            btnMiminizar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnMiminizar.Size = new Size(16, 16);
+            btnMiminizar.SizeMode = PictureBoxSizeMode.AutoSize;
             btnMiminizar.TabIndex = 1;
             btnMiminizar.TabStop = false;
             btnMiminizar.Click += btnMiminizar_Click;
+            btnMiminizar.MouseHover += pictureBox1_MouseHover;
             // 
             // btnMaximizar
             // 
-            btnMaximizar.Image = Properties.Resources.criko;
-            btnMaximizar.Location = new Point(1279, 3);
+            btnMaximizar.BackColor = Color.Transparent;
+            btnMaximizar.BackgroundImageLayout = ImageLayout.Center;
+            btnMaximizar.Image = (Image)resources.GetObject("btnMaximizar.Image");
+            btnMaximizar.Location = new Point(1345, 12);
             btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.Size = new Size(91, 37);
-            btnMaximizar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnMaximizar.Size = new Size(16, 16);
+            btnMaximizar.SizeMode = PictureBoxSizeMode.AutoSize;
             btnMaximizar.TabIndex = 0;
             btnMaximizar.TabStop = false;
             btnMaximizar.Click += pictureBox1_Click;
+            btnMaximizar.MouseHover += btnMaximizar_MouseHover;
             // 
             // Form1
             // 
@@ -148,6 +201,8 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panelBarraTitulo.ResumeLayout(false);
+            panelBarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMiminizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).EndInit();
             ResumeLayout(false);
@@ -158,10 +213,12 @@
         private Panel panel1;
         private Panel panelBarraTitulo;
         private Panel panel3;
-        private Panel panel4;
-        private PictureBox btnMaximizar;
         private PictureBox btnMiminizar;
         private Button button1;
         private Button button2;
+        private PictureBox btnMaximizar;
+        private PictureBox pictureBox1;
+        private Label titulo;
+        private Panel panel4;
     }
 }

@@ -28,26 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 15F);
             label1.ImageAlign = ContentAlignment.MiddleRight;
-            label1.Location = new Point(0, 0);
+            label1.Location = new Point(355, 87);
             label1.Name = "label1";
-            label1.Size = new Size(46, 17);
+            label1.Size = new Size(78, 25);
             label1.TabIndex = 0;
             label1.Text = "LOGIN";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(283, 130);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(205, 25);
+            textBox1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(283, 179);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(205, 25);
+            textBox2.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(297, 290);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 4;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(398, 290);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 5;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
             // 
             // LOGIN
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
+            ClientSize = new Size(1000, 500);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LOGIN";
             Text = "LOGIN";
             ResumeLayout(false);
@@ -57,5 +107,10 @@
         #endregion
 
         private Label label1;
+        private ContextMenuStrip contextMenuStrip1;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Button button1;
+        private Button button2;
     }
 }
