@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="MiCompañia.Datos/MiCompañia.Datos.csproj" Id="9d268181-6924-4e79-856b-dc4843196535" />
+  <Project Path="MiCompañia.Dominio/MiCompañia.Dominio.csproj" Id="8e365e82-6d31-4e36-9c84-f8196b1798b2" />
+  <Project Path="MiCompañia.Presentacion/MiCompañia.Presentacion.csproj" Id="67dbdd8a-50a8-4ce5-acd9-8b73999693fd" />
+  <Project Path="MiCompañia.Soporte/MiCompañia.Soporte.csproj" Id="5104789d-8282-4bbf-ac2e-417f419d0158" />
+  <Project Path="MiCompañia/MiCompañia.csproj" />
+</Solution>
