@@ -18,7 +18,7 @@ namespace MiCompañia.Presentacion
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
         }
-
+        #region Funcionalidad_de_Formulario
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -98,5 +98,51 @@ namespace MiCompañia.Presentacion
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario<LOGIN>();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario<registr>();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        #endregion
+
+
+
+        //HACER: ABRIR FORMULARIO 
+        private void Abrir_Formulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panel1.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+
+                formulario.TopLevel = false;
+                panel1.Controls.Add(formulario);
+                panel1.Tag = formulario;
+                formulario.Dock = DockStyle.Fill;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Show();
+                formulario.Focus();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+
+
     }
+
 }
+    
