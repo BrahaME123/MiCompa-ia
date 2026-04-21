@@ -38,6 +38,7 @@ namespace MiCompañia.Datos
 
                         }
                         return true;
+                        Console.WriteLine("INICIO Y CACHE INICIADOS CORRECTAMENTE");
                     }
                     else
                     {
