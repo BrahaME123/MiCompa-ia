@@ -32,7 +32,6 @@
             Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            panel4 = new Panel();
             panel3 = new Panel();
             panelBarraTitulo = new Panel();
             titulo = new Label();
@@ -52,12 +51,13 @@
             // button2
             // 
             button2.BackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Verdana", 9.75F, FontStyle.Bold);
-            button2.Location = new Point(0, 279);
+            button2.Font = new Font("Verdana", 9.75F, FontStyle.Bold, GraphicsUnit.World, 0);
+            button2.Location = new Point(0, 312);
             button2.Margin = new Padding(0);
             button2.Name = "button2";
-            button2.Size = new Size(200, 40);
+            button2.Size = new Size(230, 45);
             button2.TabIndex = 1;
             button2.Text = "Registrarse";
             button2.UseMnemonic = false;
@@ -68,12 +68,13 @@
             // 
             button1.AutoEllipsis = true;
             button1.BackColor = Color.Transparent;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Verdana", 9.75F, FontStyle.Bold);
-            button1.Location = new Point(0, 227);
+            button1.Font = new Font("Verdana", 9.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.World);
+            button1.Location = new Point(0, 250);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(200, 40);
+            button1.Size = new Size(230, 45);
             button1.TabIndex = 0;
             button1.TabStop = false;
             button1.Text = "Iniciar Sesion";
@@ -84,7 +85,6 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panelBarraTitulo);
             panel1.Dock = DockStyle.Fill;
@@ -96,15 +96,6 @@
             panel1.Paint += panel1_Paint;
             panel1.MouseHover += pictureBox1_MouseHover;
             // 
-            // panel4
-            // 
-            panel4.BackColor = Color.FromArgb(172, 237, 255);
-            panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(1173, 40);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 698);
-            panel4.TabIndex = 2;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(202, 229, 255);
@@ -112,7 +103,7 @@
             panel3.Controls.Add(button1);
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 40);
-            panel3.Margin = new Padding(0, 0, 0, 0);
+            panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 698);
             panel3.TabIndex = 0;
@@ -120,6 +111,8 @@
             // 
             // panelBarraTitulo
             // 
+            panelBarraTitulo.AutoScroll = true;
+            panelBarraTitulo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelBarraTitulo.BackColor = Color.Black;
             panelBarraTitulo.Controls.Add(titulo);
             panelBarraTitulo.Controls.Add(pictureBox1);
@@ -128,6 +121,7 @@
             panelBarraTitulo.Dock = DockStyle.Top;
             panelBarraTitulo.Location = new Point(0, 0);
             panelBarraTitulo.Name = "panelBarraTitulo";
+            panelBarraTitulo.RightToLeft = RightToLeft.Yes;
             panelBarraTitulo.Size = new Size(1373, 40);
             panelBarraTitulo.TabIndex = 0;
             panelBarraTitulo.Paint += panelBarraTitulo_Paint;
@@ -146,8 +140,10 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = Properties.Resources.maximize3;
             pictureBox1.Location = new Point(1314, 12);
             pictureBox1.Name = "pictureBox1";
@@ -160,13 +156,15 @@
             // 
             // btnMiminizar
             // 
+            btnMiminizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMiminizar.BackColor = Color.Transparent;
             btnMiminizar.BackgroundImageLayout = ImageLayout.Center;
+            btnMiminizar.Cursor = Cursors.Hand;
             btnMiminizar.Image = (Image)resources.GetObject("btnMiminizar.Image");
-            btnMiminizar.Location = new Point(1282, 12);
+            btnMiminizar.Location = new Point(1283, 9);
             btnMiminizar.Name = "btnMiminizar";
             btnMiminizar.Size = new Size(16, 16);
-            btnMiminizar.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnMiminizar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMiminizar.TabIndex = 1;
             btnMiminizar.TabStop = false;
             btnMiminizar.Click += btnMiminizar_Click;
@@ -174,8 +172,10 @@
             // 
             // btnMaximizar
             // 
+            btnMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximizar.BackColor = Color.Transparent;
             btnMaximizar.BackgroundImageLayout = ImageLayout.Center;
+            btnMaximizar.Cursor = Cursors.Hand;
             btnMaximizar.Image = (Image)resources.GetObject("btnMaximizar.Image");
             btnMaximizar.Location = new Point(1345, 12);
             btnMaximizar.Name = "btnMaximizar";
@@ -219,6 +219,5 @@
         private PictureBox btnMaximizar;
         private PictureBox pictureBox1;
         private Label titulo;
-        private Panel panel4;
     }
 }

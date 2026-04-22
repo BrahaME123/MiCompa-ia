@@ -29,6 +29,7 @@ namespace MiCompañia.Presentacion
 
         }
 
+        bool maximized = false;
 
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
         private int tolerance = 12;
@@ -123,6 +124,7 @@ namespace MiCompañia.Presentacion
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -162,6 +164,11 @@ namespace MiCompañia.Presentacion
             }
         }
 
+
+        private void Cerrar_Formulario(object sender, FormClosedEventArgs e)
+        {
+
+        }
 
 
     }
