@@ -33,7 +33,6 @@
             txtpass = new TextBox();
             button1 = new Button();
             button2 = new Button();
-            txtErrorPass = new Label();
             SuspendLayout();
             // 
             // label1
@@ -93,24 +92,12 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // txtErrorPass
-            // 
-            txtErrorPass.AutoSize = true;
-            txtErrorPass.ForeColor = Color.Red;
-            txtErrorPass.Location = new Point(114, 109);
-            txtErrorPass.Name = "txtErrorPass";
-            txtErrorPass.Size = new Size(132, 12);
-            txtErrorPass.TabIndex = 6;
-            txtErrorPass.Text = "Contraseña Incorrecta.";
-            txtErrorPass.Visible = false;
-            // 
             // LOGIN
             // 
             AutoScaleDimensions = new SizeF(7F, 12F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(1261, 680);
-            Controls.Add(txtErrorPass);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(txtpass);
@@ -134,6 +121,5 @@
         private TextBox txtpass;
         private Button button1;
         private Button button2;
-        private Label txtErrorPass;
     }
 }

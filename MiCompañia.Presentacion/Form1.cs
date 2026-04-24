@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -103,12 +104,41 @@ namespace MiCompañia.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Abrir_Formulario<LOGIN>();
+            var Manejo_Pptx = new Process();
+
+            Manejo_Pptx.StartInfo.FileName = "python";
+            Manejo_Pptx.StartInfo.Arguments = @"C:\ruta\tu_script.py";
+            Manejo_Pptx.StartInfo.UseShellExecute = false;
+            Manejo_Pptx.StartInfo.RedirectStandardOutput = true;
+            Manejo_Pptx.StartInfo.RedirectStandardError = true;
+            Manejo_Pptx.StartInfo.CreateNoWindow = true;
+
+            Manejo_Pptx.Start();
+
+
+            string output = Manejo_Pptx.StandardOutput.ReadToEnd();
+            string error = Manejo_Pptx.StandardError.ReadToEnd();
+            Manejo_Pptx.WaitForExit();
+
+            if (Manejo_Pptx.ExitCode == 0)
+            {
+                MessageBox.Show("error generando");
+                Abrir_Formulario<registr>();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Error: " + error);
+
+            }
+            // ESTE ANDA ACA SI FALLA Abrir_Formulario<LOGIN>();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Abrir_Formulario<registr>();
+
+        
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

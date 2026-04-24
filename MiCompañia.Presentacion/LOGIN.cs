@@ -51,7 +51,6 @@ namespace MiCompañia.Presentacion
                 else
                 {
                     MessageBox.Show("Ingrese su contraseña");
-                    txtErrorPass.Visible = true     ;
 
                 }
 
@@ -63,7 +62,6 @@ namespace MiCompañia.Presentacion
             txtpass.Text = "Password";
             txtpass.UseSystemPasswordChar = false;
             txtUser.Text = "Username";
-            txtErrorPass.Visible = false;
             this.Show();
         }
     }

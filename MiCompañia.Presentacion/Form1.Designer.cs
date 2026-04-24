@@ -31,6 +31,8 @@
             Button button2;
             Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            Button button3;
+            Button button4;
             panel1 = new Panel();
             panel3 = new Panel();
             panelBarraTitulo = new Panel();
@@ -40,6 +42,8 @@
             btnMaximizar = new PictureBox();
             button2 = new Button();
             button1 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panelBarraTitulo.SuspendLayout();
@@ -60,7 +64,7 @@
             button2.Name = "button2";
             button2.Size = new Size(230, 45);
             button2.TabIndex = 1;
-            button2.Text = "Registrarse";
+            button2.Text = "Generar";
             button2.UseMnemonic = false;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -79,7 +83,7 @@
             button1.Size = new Size(230, 45);
             button1.TabIndex = 0;
             button1.TabStop = false;
-            button1.Text = "Iniciar Sesion";
+            button1.Text = "Generar Convocatoria";
             button1.UseMnemonic = false;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -102,6 +106,8 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(86, 5, 141);
+            panel3.Controls.Add(button4);
+            panel3.Controls.Add(button3);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
             panel3.Dock = DockStyle.Left;
@@ -137,9 +143,9 @@
             titulo.ForeColor = Color.White;
             titulo.Location = new Point(12, 12);
             titulo.Name = "titulo";
-            titulo.Size = new Size(46, 16);
+            titulo.Size = new Size(314, 16);
             titulo.TabIndex = 3;
-            titulo.Text = "Menu";
+            titulo.Text = "Documentos para Participación Ciudadana";
             titulo.Click += titulo_Click;
             // 
             // pictureBox1
@@ -189,6 +195,38 @@
             btnMaximizar.TabStop = false;
             btnMaximizar.Click += pictureBox1_Click;
             btnMaximizar.MouseHover += btnMaximizar_MouseHover;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.World, 0);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(0, 357);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(230, 45);
+            button3.TabIndex = 2;
+            button3.Text = "Abrir Documento";
+            button3.UseMnemonic = false;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Transparent;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.World, 0);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(0, 402);
+            button4.Margin = new Padding(0);
+            button4.Name = "button4";
+            button4.Size = new Size(230, 45);
+            button4.TabIndex = 3;
+            button4.Text = "Cerrar Documento";
+            button4.UseMnemonic = false;
+            button4.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

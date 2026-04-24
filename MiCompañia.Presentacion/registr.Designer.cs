@@ -35,6 +35,10 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -43,7 +47,7 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(312, 464);
+            button1.Location = new Point(859, 403);
             button1.Margin = new Padding(5);
             button1.Name = "button1";
             button1.Size = new Size(285, 50);
@@ -58,7 +62,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(633, 467);
+            button2.Location = new Point(1180, 406);
             button2.Margin = new Padding(5);
             button2.Name = "button2";
             button2.Size = new Size(285, 50);
@@ -86,7 +90,7 @@
             textBox1.BackColor = Color.Black;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Verdana", 20F);
-            textBox1.Location = new Point(184, 139);
+            textBox1.Location = new Point(185, 95);
             textBox1.Margin = new Padding(20);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Nombre";
@@ -99,7 +103,7 @@
             textBox2.BackColor = Color.Black;
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Verdana", 20F);
-            textBox2.Location = new Point(184, 275);
+            textBox2.Location = new Point(185, 231);
             textBox2.Margin = new Padding(20);
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Puesto";
@@ -112,7 +116,7 @@
             textBox3.BackColor = Color.Black;
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Verdana", 20F);
-            textBox3.Location = new Point(184, 212);
+            textBox3.Location = new Point(185, 168);
             textBox3.Margin = new Padding(20);
             textBox3.Name = "textBox3";
             textBox3.PlaceholderText = "Apellidos";
@@ -125,18 +129,71 @@
             textBox4.BackColor = Color.Black;
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Font = new Font("Verdana", 20F);
-            textBox4.Location = new Point(184, 340);
+            textBox4.Location = new Point(185, 296);
             textBox4.Margin = new Padding(0);
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "Email";
             textBox4.Size = new Size(751, 33);
             textBox4.TabIndex = 4;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.Black;
+            textBox5.BorderStyle = BorderStyle.None;
+            textBox5.Font = new Font("Verdana", 20F);
+            textBox5.Location = new Point(185, 548);
+            textBox5.Margin = new Padding(0);
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = "Email";
+            textBox5.Size = new Size(751, 33);
+            textBox5.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            textBox6.BackColor = Color.Black;
+            textBox6.BorderStyle = BorderStyle.None;
+            textBox6.Font = new Font("Verdana", 20F);
+            textBox6.Location = new Point(185, 420);
+            textBox6.Margin = new Padding(20);
+            textBox6.Name = "textBox6";
+            textBox6.PlaceholderText = "Apellidos";
+            textBox6.Size = new Size(751, 33);
+            textBox6.TabIndex = 10;
+            // 
+            // textBox7
+            // 
+            textBox7.BackColor = Color.Black;
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Font = new Font("Verdana", 20F);
+            textBox7.Location = new Point(185, 483);
+            textBox7.Margin = new Padding(20);
+            textBox7.Name = "textBox7";
+            textBox7.PlaceholderText = "Puesto";
+            textBox7.Size = new Size(751, 33);
+            textBox7.TabIndex = 9;
+            // 
+            // textBox8
+            // 
+            textBox8.BackColor = Color.Black;
+            textBox8.BorderStyle = BorderStyle.None;
+            textBox8.Font = new Font("Verdana", 20F);
+            textBox8.Location = new Point(185, 347);
+            textBox8.Margin = new Padding(20);
+            textBox8.Name = "textBox8";
+            textBox8.PlaceholderText = "Nombre";
+            textBox8.Size = new Size(751, 33);
+            textBox8.TabIndex = 8;
             // 
             // registr
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(24, 24, 24);
             ClientSize = new Size(1361, 627);
+            Controls.Add(textBox5);
+            Controls.Add(textBox6);
+            Controls.Add(textBox7);
+            Controls.Add(textBox8);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -165,5 +222,9 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private TextBox textBox7;
+        private TextBox textBox8;
     }
 }

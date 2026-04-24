@@ -59,5 +59,10 @@ namespace MiCompañia.Presentacion
         {
 
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
