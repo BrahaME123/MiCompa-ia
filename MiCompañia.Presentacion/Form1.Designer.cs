@@ -53,7 +53,8 @@
             button2.BackColor = Color.Transparent;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Verdana", 9.75F, FontStyle.Bold, GraphicsUnit.World, 0);
+            button2.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.World, 0);
+            button2.ForeColor = Color.White;
             button2.Location = new Point(0, 312);
             button2.Margin = new Padding(0);
             button2.Name = "button2";
@@ -70,7 +71,8 @@
             button1.BackColor = Color.Transparent;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Verdana", 9.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.World);
+            button1.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.World, 0);
+            button1.ForeColor = Color.White;
             button1.Location = new Point(0, 250);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
@@ -79,11 +81,12 @@
             button1.TabStop = false;
             button1.Text = "Iniciar Sesion";
             button1.UseMnemonic = false;
-            button1.UseVisualStyleBackColor = false;
+            button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // panel1
             // 
+            panel1.AutoSize = true;
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panelBarraTitulo);
@@ -98,14 +101,14 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(202, 229, 255);
+            panel3.BackColor = Color.FromArgb(86, 5, 141);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 40);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(200, 698);
+            panel3.Size = new Size(230, 698);
             panel3.TabIndex = 0;
             panel3.Paint += panel3_Paint;
             // 
@@ -134,9 +137,10 @@
             titulo.ForeColor = Color.White;
             titulo.Location = new Point(12, 12);
             titulo.Name = "titulo";
-            titulo.Size = new Size(58, 16);
+            titulo.Size = new Size(46, 16);
             titulo.TabIndex = 3;
-            titulo.Text = "TITULO";
+            titulo.Text = "Menu";
+            titulo.Click += titulo_Click;
             // 
             // pictureBox1
             // 
@@ -206,6 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)btnMiminizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

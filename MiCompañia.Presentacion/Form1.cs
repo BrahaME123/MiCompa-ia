@@ -170,7 +170,10 @@ namespace MiCompañia.Presentacion
 
         }
 
+        private void titulo_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }

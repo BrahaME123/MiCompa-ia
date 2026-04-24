@@ -13,15 +13,17 @@ namespace MiCompañia.Datos
     {
         public bool Login(string user, string pass)
         {
-            using (var connection = new MySqlConnection())
+            //RECUERDA INSTANCIAR AL PENDEJO METODO Y NO HACER UN NEW OBJECT PUÑETAS CACA
+            using (var connection = GetConnection())
             {
+                
                 connection.Open();
                 using (var command = new MySqlCommand())
                 {
                     command.Connection = connection;
                     command.CommandText = "select * from Usuarios where (LoginName = @user and password = @pass) or (email = @user and password=@pass)";
                     command.Parameters.AddWithValue("@user", user);
-                    command.Parameters.AddWithValue("@password", pass);
+                    command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
@@ -37,18 +39,18 @@ namespace MiCompañia.Datos
                             UserCache.email = reader.GetString(6);
 
                         }
-                        return true;
                         Console.WriteLine("INICIO Y CACHE INICIADOS CORRECTAMENTE");
+                        return true;
                     }
                     else
                     {
                         Console.WriteLine("PROBLEMA AL OBTENER Y ALMACENNAR LA CACHE DE USUARO");
                         return false;
                     }
-
                 }
-
             }
+ 
+        
         }
     }
 }

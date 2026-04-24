@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using MySql.Data.MySqlClient;
-
 namespace MiCompañia.Datos
 {
     public abstract class ConnectionToMySQL
@@ -10,7 +9,7 @@ namespace MiCompañia.Datos
         private readonly String connectionString;
         public ConnectionToMySQL()
         {
-            connectionString = "\"Server=localhost; Database; User=root; port = 3306, password ";
+            connectionString = "Server=localhost; Database=micompañia; User=root; port=3306; password=123qweasdA;";
         }
 
         protected MySqlConnection GetConnection()

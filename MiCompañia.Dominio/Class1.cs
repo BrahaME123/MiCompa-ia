@@ -2,10 +2,7 @@
 namespace MiCompañia.Dominio
 {
     
-    public class Class1
-    {
-
-    }
+   
     public class UserModel 
     {
         UserDAO userDAO = new UserDAO();
